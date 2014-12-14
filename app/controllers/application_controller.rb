@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 	
 	helper_method :time #added this in an attempt to make @time accessible from applicaiton.html.erb.
 	
+	before_action :time
+	
 	def time
 		@time = Time.now
 	end
